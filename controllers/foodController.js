@@ -7,7 +7,7 @@ import fs from "fs";
    const food = new Food({
       name:req.body.name,
       description:req.body.description,
-      prive:req.body.price,
+      price:req.body.price,
       category:req.body.category,
       image:image_filename
    });
