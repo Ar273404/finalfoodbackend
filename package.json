@@ -2,10 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "Food Delivery",
-  "main": "server.js",
+  "main": "index.js",
   "type":"module",
   "scripts": {
-    "start": "node Server.js"
+    "start": "node index.js"
   },
   "author": "Arun Yadav",
   "license": "ISC",
