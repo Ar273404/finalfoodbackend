@@ -29,7 +29,7 @@ connectDB();
 
 
 //api endpoints
-app.use("/api/food",foodRouter)
+app.use("/food",foodRouter)
 app.use("/images",express.static('uploads'))
 app.use("/User_register", register);
 app.use("/User_login", login);
