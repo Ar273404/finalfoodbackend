@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "delivery-backend",
   "version": "1.0.0",
   "description": "Food Delivery",
   "main": "index.js",
