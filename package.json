@@ -1,7 +1,7 @@
 {
   "name": "delivery-backend",
   "version": "1.0.0",
-  "description": "Food Delivery",
+  "description": "foodservice-backend",
   "main": "index.js",
   "type": "module",
   "scripts": {
