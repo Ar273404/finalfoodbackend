@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Food Delivery",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "start": "node index.js"
   },
