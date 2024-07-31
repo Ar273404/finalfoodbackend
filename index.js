@@ -14,6 +14,7 @@ import verifyToken from "./middleware/VarifyToken.js";
 import addToCart, { getCartItem,handleDelete} from "./controllers/addToCart.js";
 import { decrementCartItem, incrementCartItem } from "./controllers/cartController.js";
 import orderRouter from "./routes/orderRoute.js";
+import fileUpload from "express-fileupload";
 //app config
  const app = express();
  const port = process.env.PORT || 8080;
@@ -21,7 +22,21 @@ import orderRouter from "./routes/orderRoute.js";
 
 //middleware
 app.use(express.json())
-app.use(cors())
+app.use(
+  cors({
+    origin: [process.env.FRONTED_URL, process.env.ADMIN_URL],
+    method: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
+//for file 
+app.use(
+  fileUpload({
+    useTempFiles:true,
+    tempFileDir:"/temp"
+  })
+)
 
 //db connection
 connectDB();
@@ -29,7 +44,7 @@ connectDB();
 
 
 //api endpoints
-app.use("/api/food",foodRouter)
+app.use("/food",foodRouter)
 app.use("/images",express.static('uploads'))
 app.use("/User_register", register);
 app.use("/User_login", login);
