@@ -19,6 +19,9 @@ import fileUpload from "express-fileupload";
  const app = express();
  const port = process.env.PORT || 8080;
 
+ app.get("/", (req, res) => {
+   res.send("hello Welcome to Arun Hospital Management!");
+ });
 
 //middleware
 app.use(express.json())
